@@ -1,0 +1,1 @@
+Get-ChildItem -Path C:\Users\$env:USERNAME\Desktop, C:\Users\$env:USERNAME\Documents -Recurse -File -ErrorAction SilentlyContinue | Select-String -Pattern 'password|pwd|pass|secret|key|token' -ErrorAction SilentlyContinue | Select-Object Filename, LineNumber, Line
